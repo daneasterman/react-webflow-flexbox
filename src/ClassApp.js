@@ -5,53 +5,60 @@ const MAX_TWEET_LENGTH = 280;
 
 export default class ClassApp extends React.PureComponent {
   state = {
-    text: ""
+    text: "",
+    tweet: ""
   };
 
   _handleTextChange = event => {
     this.setState({ text: event.target.value });
   };
 
+  _saveTweet = event => {
+    event.preventDefault();
+    this.setState({ tweet: this.state.text, text: "" });
+  };
+
   render() {
-    const { text } = this.state;
+    const { text, tweet } = this.state;
 
     const charactersRemaining = MAX_TWEET_LENGTH - text.length;
-
     const tweetIsOutOfRange =
-      charactersRemaining === MAX_TWEET_LENGTH || charactersRemaining < 0;
-
+      text.length === 0 || text.length > MAX_TWEET_LENGTH;
     const underTenCharacters = charactersRemaining <= 10;
 
     return (
       <div className="flex items-center justify-center vh-100">
         <div style={{ width: "45%" }} className="w-75 center ba b--black-10">
-          <div className="pv2 tc bb b--black-10">
-            <h1 className="ma0 f5 normal">Create Tweet</h1>
-          </div>
+          <p style={{ paddingLeft: "16px" }}>
+            <b>Your saved tweet:</b> {tweet}
+          </p>
 
           <div className="bg-near-white pa3">
             <textarea
               className="w-100 br2 ba b--black-10 pa2"
               onChange={this._handleTextChange}
-              placeholder="Write your tweet here"
+              placeholder="What's happening?"
               rows="4"
+              value={text}
             />
 
-            <div style={{ justifyContent: "flex-end" }} className="mt3 flex">
-              <div className="flex items-center">
-                <span
-                  style={{ color: `${underTenCharacters ? "#e7040f" : ""}` }}
-                  className="mr3 black-70"
-                >
-                  {charactersRemaining}
-                </span>
-                <button
-                  disabled={tweetIsOutOfRange}
-                  className="button-reset bg-blue bn white f6 fw5 pv2 ph3 br2 dim"
-                >
-                  Tweet
-                </button>
-              </div>
+            <div
+              style={{ justifyContent: "flex-end", alignItems: "center" }}
+              className="mt3 flex"
+            >
+              <span
+                style={{ color: `${underTenCharacters ? "#e7040f" : ""}` }}
+                className="mr3 black-70"
+              >
+                {charactersRemaining}
+              </span>
+              <button
+                disabled={tweetIsOutOfRange}
+                onClick={this._saveTweet}
+                className="button-reset bg-blue bn white f6 fw5 pv2 ph3 br2 dim"
+              >
+                Tweet
+              </button>
             </div>
           </div>
         </div>

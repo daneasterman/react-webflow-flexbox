@@ -1,94 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Building a twitter style "tweetbox" with React hooks and classes
 
-## Available Scripts
+## Purpose
 
-In the project directory, you can run:
+The aim of this project is to compare two approaches for building interactivity within a simple "tweetbox" UI component. The first uses the traditional React class with `this.state`, while the second uses the new React state hook called `useState`.
 
-### `npm start`
+Very much open to any way the code could be improved! Here is a screenshot:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Tweetbox](https://i.imgur.com/285iHJO.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+This project was bootstrapped with `create-react-app` to make it faster and easier to get up and running. We want to prioritise coding over installing and configuring!
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy running on your computer:
 
-### `npm run build`
+1. Clone this repo: `git clone https://github.com/daneasterman/class-hooks-tweetbox.git`
+2. Install all the project dependencies: `yarn install`
+3. Start the project: `yarn start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please let me know if you have any problems getting set up. You can contact me on twitter: `@daneasterman`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+N.B: the above assumes you have node and yarn already installed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Coming Soon
 
-### `npm run eject`
+- Some detail on exactly which features have been implemented.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- For those who want to dive straight in and skip the getting started steps above, I also want to put this on Codepen.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Revamping the way the CSS works with Tachyons ie. cleaning up all the classNames and extra divs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Credits
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I was heavily influenced by an earlier tutorial on Vue.js by Matt Rothenberg while creating this tweetbox component. Much of the way I used the Tachyons CSS libary is derived from here - even though I'm not entirely satisfied with how I've used it. The article on freeCodeCamp is called: [A Vue.js introduction for people who know just enough jQuery to get by](https://medium.freecodecamp.org/vue-js-introduction-for-people-who-know-just-enough-jquery-to-get-by-eab5aa193d77)
 
-## Learn More
+Matt's article originally helped me to learn basic concepts in React by building a kind of mashup with another tutorial from 2015 (under construction) which can be found here: [React.js Introduction For People Who Know Just Enough jQuery To Get By](https://chibicode.com/react-js-introduction-for-people-who-know-just-enough-jquery-to-get-by/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Warning: the JS bin snippets in Shu Uesugi's tutorial don't seem to work anymore and it uses much older React syntax like `createClass`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-<!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-
-<!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+This recent article from CSS tricks has also been extremely useful: [Intro to React Hooks](https://css-tricks.com/intro-to-react-hooks/). The idea of using my own `saveTweet` function came from this source).
