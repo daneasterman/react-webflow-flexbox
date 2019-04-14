@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The aim of this project is to compare two approaches for building interactivity within a simple "tweetbox" UI component. The first uses the traditional React class with `this.state`, while the second uses the new React state hook called `useState`.
+The aim of this project is to compare two approaches of building a simple "tweetbox" UI component. The first uses the traditional React class with `this.state`, while the second uses the new React state hook called `useState`.
 
 Very much open to any way the code could be improved! Here is a screenshot:
 
