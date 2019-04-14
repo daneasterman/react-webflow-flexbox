@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
 
+// charactersRemaining: function() {
+//   return MAX_TWEET_LENGTH - this.tweet.length;
+// }
+
+const MAX_TWEET_LENGTH = 280;
+
 class App extends React.PureComponent {
   state = {
     text: ""
@@ -11,9 +17,15 @@ class App extends React.PureComponent {
   };
 
   render() {
+    const { text } = this.state;
+
+    const charactersRemaining = MAX_TWEET_LENGTH - text.length;
+
+    const tweetIsOutOfRange =
+      charactersRemaining < 0 || charactersRemaining === MAX_TWEET_LENGTH;
+
     return (
       <>
-        {console.log(this.state.text)}
         <div className="pv2 tc bb b--black-10">
           <h1 className="ma0 f5 normal">Create Tweet</h1>
         </div>
@@ -45,8 +57,10 @@ class App extends React.PureComponent {
             </button>
 
             <div className="flex items-center">
+              <span className="mr3 black-70">{charactersRemaining}</span>
+
               <button
-                disabled={this.state.text.length === 0}
+                disabled={tweetIsOutOfRange}
                 className="button-reset bg-blue bn white f6 fw5 pv2 ph3 br2 dim"
               >
                 Message
