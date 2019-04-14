@@ -23,19 +23,18 @@ export default class ClassApp extends React.PureComponent {
     const underTenCharacters = charactersRemaining <= 10;
 
     return (
-      <body class="flex items-center justify-center vh-100">
-        <div style={{ width: "45%" }} class="w-75 center ba b--black-10">
+      <div className="flex items-center justify-center vh-100">
+        <div style={{ width: "45%" }} className="w-75 center ba b--black-10">
           <div className="pv2 tc bb b--black-10">
             <h1 className="ma0 f5 normal">Create Tweet</h1>
           </div>
 
           <div className="bg-near-white pa3">
             <textarea
-              onChange={this._handleTextChange}
-              placeholder="Write your report here"
-              name="tweet"
-              rows="4"
               className="w-100 br2 ba b--black-10 pa2"
+              onChange={this._handleTextChange}
+              placeholder="Write your tweet here"
+              rows="4"
             />
 
             <div style={{ justifyContent: "flex-end" }} className="mt3 flex">
@@ -50,13 +49,13 @@ export default class ClassApp extends React.PureComponent {
                   disabled={tweetIsOutOfRange}
                   className="button-reset bg-blue bn white f6 fw5 pv2 ph3 br2 dim"
                 >
-                  Message
+                  Tweet
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </body>
+      </div>
     );
   }
 }
