@@ -18,7 +18,7 @@ To get a local copy running on your computer:
 2. Install all the project dependencies: `yarn install`
 3. Start the project: `yarn start`
 
-Please let me know if you have any problems getting set up. You can contact me on twitter: `@daneasterman`
+Please let me know if you have any problems getting set up. You can contact me on (surprise, surprise) twitter: `@daneasterman`
 
 N.B: the above assumes you have node and yarn already installed.
 
