@@ -4,7 +4,7 @@
 
 The aim of this project is to compare two approaches of building a simple "tweetbox" UI component. The first uses the traditional React class with `this.state`, while the second uses the new React state hook called `useState`.
 
-Very much open to any way the code could be improved! Here is a screenshot:
+I'm very much open to any way the code could be improved! Here's a screenshot:
 
 ![Tweetbox](https://i.imgur.com/285iHJO.png)
 
