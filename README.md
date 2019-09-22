@@ -1,4 +1,4 @@
-# Build React Flexbox components from Webflow official examples
+# Build React Flexbox components from Webflow Official Examples
 
 
 ## Getting Started
