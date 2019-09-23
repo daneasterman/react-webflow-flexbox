@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 // import ClassApp from "./ClassApp";
-import HooksApp from "./HooksApp";
+import WebflowFlexboxPage from "./pages/WebflowFlexboxPage";
 
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<HooksApp />, document.getElementById("root"));
+ReactDOM.render(<WebflowFlexboxPage />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
